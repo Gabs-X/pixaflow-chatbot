@@ -75,8 +75,10 @@ export function Chat() {
         ))}
 
         {isLoading && (
-          <div className="mr-auto rounded-xl bg-zinc-100 px-4 py-2.5 text-sm text-zinc-500">
-            Thinking...
+          <div className="flex items-center gap-1">
+            <span className="h-2 w-2 animate-bounce rounded-full bg-zinc-400" />
+            <span className="h-2 w-2 animate-bounce rounded-full bg-zinc-400 [animation-delay:150ms]" />
+            <span className="h-2 w-2 animate-bounce rounded-full bg-zinc-400 [animation-delay:300ms]" />
           </div>
         )}
       </div>
