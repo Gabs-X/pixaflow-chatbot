@@ -4,6 +4,13 @@ const { createMock } = vi.hoisted(() => ({
   createMock: vi.fn(),
 }));
 
+vi.mock("../config/env", () => ({
+  env: {
+    geminiApiKey: "test-api-key",
+    port: 3001,
+  },
+}));
+
 vi.mock("@google/genai", () => {
   class GoogleGenAI {
     interactions = {
